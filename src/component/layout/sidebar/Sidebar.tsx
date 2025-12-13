@@ -37,6 +37,8 @@ const sidebar: SidebarItem[] = [
       { title: 'New', link: '/research-projects/new' },
       { title: 'Ongoing', link: '/research-projects/on-going' },
       { title: 'Completed', link: '/research-projects/completed' },
+      { title: 'Terminated', link: '/research-projects/terminated' },
+      { title: 'Submit', link: '/research-projects/Submit' },
     ],
   },
   { title: 'In-House Schedule', link: '/in-house-schedule', icon: <AiOutlineSchedule size={20} /> },

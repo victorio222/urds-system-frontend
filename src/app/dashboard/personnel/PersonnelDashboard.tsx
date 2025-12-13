@@ -66,6 +66,9 @@ import TerminatedProposal from "./cards/TerminatedProposal";
 import CompletedProposal from "./cards/CompletedProposal";
 import RecentProjectPage from "./table/AnnualResearch";
 import MonthlyAnalytics from "./table/MonthlyAnalytics";
+import UpcomingReviewSchedule from "./table/UpcomingReviewSchedule";
+import RecentAnnouncement from "./table/RecentAnnouncement";
+import NotificationsTable from "./table/NotificationsTable";
 
 const FacultyDashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -100,6 +103,26 @@ const FacultyDashboard = () => {
           <RecentProjectPage/>
         </div>
          <RecentProposal/>
+   <section className="mt-4">
+    
+      <div className="grid gap-4 lg:grid-cols-12">
+        {/* 25% width */}
+        <div className="lg:col-span-3">
+          <RecentAnnouncement />
+        </div>
+
+        {/* 25% width */}
+        <div className="lg:col-span-3">
+          <NotificationsTable />
+        </div>
+
+        {/* 50% width */}
+        <div className="lg:col-span-6">
+          <UpcomingReviewSchedule />
+        </div>
+      </div>
+    </section>
+        
       </div>
     </div>
     // {/* </ProtectedRoute> */}
