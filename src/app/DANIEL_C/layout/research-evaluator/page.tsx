@@ -40,7 +40,7 @@ export default function EvaluationPanel() {
       {/* Main Content */}
       <div className="flex flex-1 max-w-[1600px] mx-auto w-full">
         {/* Left Sidebar */}
-        <aside className="w-[380px] bg-gray-100 p-6 border-r border-gray-200">
+        <aside className="w-[380px] bg-gray-100 p-6 border-r border-gray-200 overflow-y-auto flex flex-col sticky top-0 self-start" style={{ maxHeight: 'calc(100vh - 64px)' }}>
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">Evaluation Panel</h2>
 
           {/* Evaluator Information */}
@@ -66,8 +66,130 @@ export default function EvaluationPanel() {
           </div>
 
           {/* Evaluation Criteria */}
-          <div className="mb-8">
-            <h3 className="font-semibold text-gray-700">Evaluation Criteria for New Proposal</h3>
+          <div className="mb-6">
+            <h3 className="font-semibold text-gray-700 mb-4">Evaluation Criteria</h3>
+            <div className="space-y-4">
+              {/* Grammar and Delivery */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Grammar and Delivery
+                </label>
+                <select className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white text-gray-900 mb-2">
+                  <option value="">Select Performance Level</option>
+                  <option value="poor">Poor (59% and below)</option>
+                  <option value="beginning">Beginning (60% - 74%)</option>
+                  <option value="developing">Developing (75% - 79%)</option>
+                  <option value="proficient">Proficient (80% - 88%)</option>
+                  <option value="exemplary">Exemplary (89% - 100%)</option>
+                </select>
+                <Input 
+                  type="number" 
+                  placeholder="Grade/Score" 
+                  className="w-full bg-white border-gray-300 text-black"
+                  min="0"
+                  max="100"
+                />
+              </div>
+
+              {/* Mastery of the Study (Manuscript) */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Mastery of the Study (Manuscript)
+                </label>
+                <select className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white text-gray-900 mb-2">
+                  <option value="">Select Performance Level</option>
+                  <option value="poor">Poor (59% and below)</option>
+                  <option value="beginning">Beginning (60% - 74%)</option>
+                  <option value="developing">Developing (75% - 79%)</option>
+                  <option value="proficient">Proficient (80% - 88%)</option>
+                  <option value="exemplary">Exemplary (89% - 100%)</option>
+                </select>
+                <Input 
+                  type="number" 
+                  placeholder="Grade/Score" 
+                  className="w-full bg-white border-gray-300 text-black"
+                  min="0"
+                  max="100"
+                />
+              </div>
+
+              {/* Mastery of the Study (System) */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Mastery of the Study (System)
+                </label>
+                <select className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white text-gray-900 mb-2">
+                  <option value="">Select Performance Level</option>
+                  <option value="poor">Poor (59% and below)</option>
+                  <option value="beginning">Beginning (60% - 74%)</option>
+                  <option value="developing">Developing (75% - 79%)</option>
+                  <option value="proficient">Proficient (80% - 88%)</option>
+                  <option value="exemplary">Exemplary (89% - 100%)</option>
+                </select>
+                <Input 
+                  type="number" 
+                  placeholder="Grade/Score" 
+                  className="w-full bg-white border-gray-300 text-black"
+                  min="0"
+                  max="100"
+                />
+              </div>
+
+              {/* Attire */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Attire
+                </label>
+                <select className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white text-gray-900 mb-2">
+                  <option value="">Select Performance Level</option>
+                  <option value="poor">Poor (59% and below)</option>
+                  <option value="beginning">Beginning (60% - 74%)</option>
+                  <option value="developing">Developing (75% - 79%)</option>
+                  <option value="proficient">Proficient (80% - 88%)</option>
+                  <option value="exemplary">Exemplary (89% - 100%)</option>
+                </select>
+                <Input 
+                  type="number" 
+                  placeholder="Grade/Score" 
+                  className="w-full bg-white border-gray-300 text-black"
+                  min="0"
+                  max="100"
+                />
+              </div>
+
+              {/* Presentation of the Manuscript */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Presentation of the Manuscript
+                </label>
+                <select className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white text-gray-900 mb-2">
+                  <option value="">Select Performance Level</option>
+                  <option value="poor">Poor (59% and below)</option>
+                  <option value="beginning">Beginning (60% - 74%)</option>
+                  <option value="developing">Developing (75% - 79%)</option>
+                  <option value="proficient">Proficient (80% - 88%)</option>
+                  <option value="exemplary">Exemplary (89% - 100%)</option>
+                </select>
+                <Input 
+                  type="number" 
+                  placeholder="Grade/Score" 
+                  className="w-full bg-white border-gray-300 text-black"
+                  min="0"
+                  max="100"
+                />
+              </div>
+
+              {/* Comments */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Comments
+                </label>
+                <textarea 
+                  className="w-full p-2 border border-gray-300 rounded-md text-sm bg-white text-gray-900 min-h-[120px] resize-y"
+                  placeholder="Enter your comments here..."
+                />
+              </div>
+            </div>
           </div>
 
           {/* Action Buttons */}
