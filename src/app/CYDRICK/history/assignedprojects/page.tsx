@@ -1,16 +1,15 @@
 'use client';
 import React, { useState } from 'react';
 import DefaultLayout from '@/component/layout/DefaultLayout';
-import InHousePage from './table/EvaluationHistory';
-import EvaluationHistory from './table/EvaluationHistory';
+import AssignedProjectPage from './table/AssignedProjects';
 
-const Announcements = () => {
+const AssignedProject = () => {
   return (
     <div className="flex max-h-screen">
       <div className="bg-blue-50 h-auto w-full">
-        <DefaultLayout pageName='Evaluation History'>
+        <DefaultLayout pageName='Assigned Projects'>
           <div className='py-3 px-5'>
-            <EvaluationHistory />
+            <AssignedProjectPage />
           </div>
         </DefaultLayout>
       </div>
@@ -18,4 +17,4 @@ const Announcements = () => {
   );
 };
 
-export default Announcements;
+export default AssignedProject;
