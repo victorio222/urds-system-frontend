@@ -13,6 +13,7 @@ interface BatchEntry {
   status: "Completed" | "Terminated" | "Pending" | "Ongoing";
 }
 
+
 const EvaluationHistory = () => {
   // DATA ONLY
   const data: BatchEntry[] = [
