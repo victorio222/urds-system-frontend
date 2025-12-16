@@ -13,9 +13,8 @@ interface BatchEntry {
   status: "Completed" | "Terminated" | "Pending" | "Ongoing";
 }
 
-
 const EvaluationHistory = () => {
-  // DATA ONLY
+  // DATA ONLY ems
   const data: BatchEntry[] = [
     {
       id: 1,
