@@ -11,7 +11,7 @@ interface ActionDropdownProps {
 }
 
 const DROPDOWN_WIDTH = 190;
-const DROPDOWN_HEIGHT = 130; // approx height based on 3 buttons ~43px each
+const DROPDOWN_HEIGHT = 130; // approox height based on 3 buttons ~43px each
 
 const ActionDropdown: React.FC<ActionDropdownProps> = ({ onView, onApprove, onRequest }) => {
   const [open, setOpen] = useState(false);
