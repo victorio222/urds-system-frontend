@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import DefaultLayout from '@/component/layout/DefaultLayout';
-import TwgEvalPage from './table/TwgEvaluation';
+import TwgEvalPage from './table/TwgEvalPage';
 
 const Announcements = () => {
   return (
