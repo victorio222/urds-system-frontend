@@ -14,7 +14,7 @@ interface BatchEntry {
 }
 
 const EvaluationHistory = () => {
-  // DATA ONLY ems
+  // DATA ONLY
   const data: BatchEntry[] = [
     {
       id: 1,
