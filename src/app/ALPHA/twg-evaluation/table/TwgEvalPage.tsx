@@ -178,6 +178,8 @@
 "use client";
 
 import React, { useState } from "react";
+// ⭐ IMPORT THE ROUTER FROM NEXT/NAVIGATION
+import { useRouter } from 'next/navigation';
 import Table from "@/component/ui/Table";
 import { BiSolidFilterAlt } from "react-icons/bi";
 import ActionDropdown from "../action/ActionDropdown";
@@ -201,6 +203,8 @@ interface BatchEntry {
 type ColumnKey = keyof BatchEntry | "checkbox" | "action";
 
 const TwgEvalPage = () => {
+  // ⭐ Initialize the router
+  const router = useRouter();
   const [selectedRows, setSelectedRows] = useState<number[]>([]);
   const [selectAll, setSelectAll] = useState(false);
 
@@ -245,6 +249,16 @@ const TwgEvalPage = () => {
   // ⭐ HANDLER FUNCTIONS FOR REVISION MODAL
   // ----------------------------------------------------
   
+  // BAGONG FUNCTION: Ito ang mag-tri-trigger ng navigation
+  const handleViewDetails = (batchId: string) => {
+    // Construct the path using the batchId (assuming it's a unique identifier)
+    // Ang path na ito ay base sa folder structure mo
+    // const path = `/DANIEL_C/layout/research-evaluator/page.tsx/${batchId}`;
+          const path = `/ALPHA/twg-evaluation/reports`;
+    // Use the router to navigate
+    router.push(path);
+  };
+
   // 1. Handle Approve Click (Opens Research Approval Modal) - NEW
   const handleApproveClick = (batch: BatchEntry) => {
     setSelectedBatch(batch);
@@ -361,7 +375,8 @@ const TwgEvalPage = () => {
       width: "60px",
       render: (_: any, row: BatchEntry) => (
         <ActionDropdown
-          onView={() => alert(`Viewing details for ${row.batchId}`)}
+          // ⭐ I-UPDATE ANG onView para tawagin ang navigation function
+          onView={() => handleViewDetails(row.batchId)}
          // ⭐ I-HOOK UP ang onApprove sa Research Approval Modal
           onApprove={() => handleApproveClick(row)}
           // ⭐ I-HOOK UP ang onRequest sa bagong handler
