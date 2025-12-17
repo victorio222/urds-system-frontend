@@ -12,6 +12,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "URDS - University Research and Development Services",
   description: "University Research and Development Services",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+  },
 };
 
 export default function RootLayout({
